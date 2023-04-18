@@ -252,4 +252,3 @@ const pets = [
   </div>`;
   }
   console.log(domString);
-  targetingApp.innerHTML = domString;
