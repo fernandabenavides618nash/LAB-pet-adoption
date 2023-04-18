@@ -245,11 +245,9 @@ const pets = [
   let domString = "";
   for (const animal of pets) {
     domString += `<div class="card" style="width: 18rem;">
-    <img src=${animal.imageUrl} class="card-img-top" alt=${animal.name}>
+    <img src="animal.imageUrl" class="card-img-top" alt="animal">
     <div class="card-body">
-      <p class="card-text">adopt this animal</p>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
-  </div>`;
+  </div>`
   }
-  console.log(domString);
-  targetingApp.innerHTML = domString;
