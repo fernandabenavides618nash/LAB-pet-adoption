@@ -1,0 +1,9 @@
+body {
+  background-color: black;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  
+}

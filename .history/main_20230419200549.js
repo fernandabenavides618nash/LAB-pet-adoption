@@ -283,7 +283,7 @@ const showDogsButton = document.querySelector("#dogs");
 const showDinosButton = document.querySelector("#dinos");
 const showAllButton = document.querySelector("#all");
 
-showDogsButton.addEventListener('click', () => {
+showDogButton.addEventListener('click', () => {
   const theDogs = filter(pets,'dog');
   cardsOnDom(theDogs);
 });
