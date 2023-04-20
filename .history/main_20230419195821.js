@@ -242,7 +242,7 @@ const pets = [
 ];
 
 const renderToDom =(divId, htmlToRender) => {
-  const selectedDivId = document.querySelector(divId);
+  const selectedDiv = document.querySelector(divId);
   selectedDivId.innerHTML = htmlToRender;
 }
 
@@ -259,10 +259,8 @@ const cardsOnDom = (array) => {
     </div>
   </div>`
   }
-  renderToDom("#app", domString);
+  renderToDom("add", domString);
 }
-cardsOnDom(pets);
-console.log(pets);
 
 cardsOnDom(pets)
 
@@ -283,7 +281,7 @@ const showDogsButton = document.querySelector("#dogs");
 const showDinosButton = document.querySelector("#dinos");
 const showAllButton = document.querySelector("#all");
 
-showDogsButton.addEventListener('click', () => {
+showDogButton.addEventListener('click', () => {
   const theDogs = filter(pets,'dog');
   cardsOnDom(theDogs);
 });
