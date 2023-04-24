@@ -328,22 +328,3 @@ const createPet = (e) => {
 }
 
 form.addEventListener('submit', createPet);
-
-/* deleting pets*/
-
-const app = document.querySelector("#app");
-
-app.addEventListener('click', (e) => {
-  if (e.target.id.includes("delete")) {
-    const [, id] = e.target.id.split("--");
-    const index = pets.findIndex(e => e.id === Number(id));
-    team.splice(index, 1);
-    cardsOnDom(pets);
-  }
-});
-
-const startApp = () => {
-  cardsOnDom(pets);
-}
-
-startApp('delete');

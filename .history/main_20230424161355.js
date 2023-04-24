@@ -338,7 +338,7 @@ app.addEventListener('click', (e) => {
     const [, id] = e.target.id.split("--");
     const index = pets.findIndex(e => e.id === Number(id));
     team.splice(index, 1);
-    cardsOnDom(pets);
+    cardsOnDom(team);
   }
 });
 
@@ -346,4 +346,4 @@ const startApp = () => {
   cardsOnDom(pets);
 }
 
-startApp('delete');
+startApp();

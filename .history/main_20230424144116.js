@@ -260,7 +260,7 @@ const cardsOnDom = (array) => { // the array parameter can be taco
       <p class="card-text">${pet.specialSkill}</p>
       <p class="card-text">${pet.type}</p>
     </div>
-  </div>`//and adds the html to render to variable for each pet (or the element of the array 'taco')
+  </div>`// and adds the html to render to variable for each pet (or the element of the array 'taco')
   }
   renderToDom("#app", domString); // renderToDom is called with the arguments of #app (divId) and domString (htmlToRender)
 }
@@ -309,41 +309,3 @@ showAllButton.addEventListener('click', () => {
 
 
 /* creating pets */
-
-const form = document.querySelector('form'); // targeting the form tag from dom(html)
-
-const createPet = (e) => {
-  e.preventDefault(); //gotta ask
-  const newPetObject = {
-    id: pets.length + 1,
-    name: document.querySelector('#name').value,
-    color: document.querySelector('#color').value,
-    specialSkill: document.querySelector('#specialSkill').value,
-    type: document.querySelector('#type').value,
-    image: document.querySelector('#image').value,
-  }
-  pets.push(newPetObject);
-  cardsOnDom(pets);
-  form.reset();
-}
-
-form.addEventListener('submit', createPet);
-
-/* deleting pets*/
-
-const app = document.querySelector("#app");
-
-app.addEventListener('click', (e) => {
-  if (e.target.id.includes("delete")) {
-    const [, id] = e.target.id.split("--");
-    const index = pets.findIndex(e => e.id === Number(id));
-    team.splice(index, 1);
-    cardsOnDom(pets);
-  }
-});
-
-const startApp = () => {
-  cardsOnDom(pets);
-}
-
-startApp('delete');
