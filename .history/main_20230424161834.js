@@ -346,4 +346,4 @@ const startApp = () => {
   cardsOnDom(pets);
 }
 
-startApp('delete');
+startApp();
